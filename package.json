@@ -1,0 +1,27 @@
+{
+  "name": "helpfulhuman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start": "node ./index.js",
+    "seed": "node scripts/seed.js",
+    "test": "NODE_ENV=test npx jest --runInBand",
+    "test-watch": "NODE_ENV=test npx jest --watch --runInBand"
+  },
+  "author": "stuart",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "pg": "^8.1.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.9"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.3"
+  }
+}

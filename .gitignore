@@ -1,0 +1,16 @@
+# dependencies
+node_modules
+
+# dev environment
+.env*
+
+# data for docker postgres volume
+docker_data
+
+# misc
+/.DS_Store
+**.DS_Store
+/npm-debug.log
+
+# docker
+pg-data
