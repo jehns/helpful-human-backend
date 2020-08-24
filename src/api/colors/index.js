@@ -23,7 +23,8 @@ router.get("/", async (req, res, next) => {
 router.get("/random", async (req, res, next) => {
   try {
     const randomColor = await Color.findOne({order: [[sequelize.fn('RANDOM')]]});
-    res.json(randomColor)
+    const similarColors = await Color.findAll({where: { colorGroupId: randomColor.colorGroupId}});
+    res.json({randomColor, similarColors})
   } catch (err) {
     next(err);
   }
