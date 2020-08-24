@@ -15,9 +15,6 @@ const db = require('./src/db');
 // APP
 const app = express();
 
-// PORT
-const SERVER_PORT = process.env.SERVER_PORT || 3002;
-
 // CORS - must add new origins to list
 // const whitelist = [process.env.CLIENT_ORIGIN];
 // const corsOptions = {
@@ -52,8 +49,8 @@ const createApp = () => {
 
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
-  app.listen(SERVER_PORT, () =>
-    console.log(`Listening on port: ${SERVER_PORT}`)
+  app.listen(process.env.PORT || 3002, () =>
+    console.log(`Listening on port: ${process.env.PORT}`)
   )
 }
 
